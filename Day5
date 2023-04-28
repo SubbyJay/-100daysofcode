@@ -1,0 +1,37 @@
+religion = input("Are you a muslim or a christian?: ")
+if religion == "muslim":
+   print("As-salamu alaikum")
+else:
+ print("Peace unto you")
+ 
+ drink = input("Do you prefer coffee or tea?: ")
+if drink == "coffee":
+  print("Tea is better.")
+else:
+   print("Excellent choice.")
+   
+   
+   print("====Marvel Movie Character Creator====")
+print()
+print("Answer these questions and let's find out.")
+print()
+print("Please use Y or N for yes and no.")
+print()
+spiderman = input("Do you like 'hanging around'?: ")
+korg = input(" Do you have a 'gravelly' voice?: ")
+captainmarvel = input("Do you often feel 'Marvelous'?: ")
+print()
+if spiderman == "Y":
+  print("You're an amazing spider-man!")
+else:
+  print("Then you're not Spider-man")
+  print()
+  if korg =="Y":
+    print("ouuuu, You're Korg!")
+  else:
+    print("aww, then you're not Korg")
+    print()
+    if captainmarvel == "Y":
+      print("wow, You're Captain Marvel! Hi!")
+    else:
+      print("Oops! You're not Captain Marvel!")
