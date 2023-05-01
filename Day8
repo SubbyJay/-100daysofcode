@@ -1,0 +1,25 @@
+print("=== This is a random affirmation generator ===")
+print()
+yourname = input("what's your name? > ")
+yourage = input("what's your age? > ")
+nationality = input("where are you from? > ")
+city = input("which city are you from? > ")
+print(yourname, "you are from the wonderful city of", city, "in", nationality)
+moreQuestions = input("are you ready for more exciting questions? > ")
+if moreQuestions == "Yes" or moreQuestions == "yes":
+ print("okay, good. Let's talk about your best Netflix series")
+ NetflixSeries = input("What is your favourite Netflix series? > ")
+ if NetflixSeries == "Mr Robot":
+  print("ouuu, you've got taste!")
+ faveSeason = input("What's your favourite season? > ")
+ if faveSeason == "season 2":
+  print("Damn! me too")
+ faveEpisodes = input("what's your favourite episode? > ")
+ if faveEpisodes == "episode 8":
+  print("damn! when fsociety publishes secret FBI recordings revealing illegal activities of the organisation!")
+ elif NetflixSeries == "breaking bad":
+  print("this is one of the best series I've ever watched")
+ else:
+  print("Yeah, that's cool, I'd probably try that…")
+else:
+ print("Thanks for your time",yourname)
