@@ -1,0 +1,23 @@
+score = float(input("What was your score on the test? "))
+if score >= 80 :
+  print("Not too shabby")
+elif score > 70 :
+  print("Acceptable.")
+else:
+ print("Dude, you need to study more!")
+ 
+ 
+ print("=== This is a generation generator ===")
+print(" This generator detects what generation you're part of when you input the year you were born")
+print()
+generation = float(input("what year were you born? > "))
+if generation <= 1946 :
+  print("You're a Traditionalists!")
+elif generation <= 1964 :
+  print("you're a Baby Boomer!")
+elif generation <= 1981 :
+  print("Gen X!, welcome to the new world!")
+elif generation <= 1995 :
+  print("Hey Millenial!")
+else:
+  print("what's up Gen Z!")
