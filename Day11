@@ -1,0 +1,23 @@
+print(" This is a code to show how many seconds are in a year ")
+print()
+print("=== To answer any question use figures ===")
+seconds_in_a_minute = 60
+minutes_in_an_hour = 60
+hours_in_a_day = 24
+days_in_a_month = 31
+months_in_a_year = 12
+days_in_a_year = 365
+days_in_a_leap_year = 366
+normal_year = seconds_in_a_minute * minutes_in_an_hour * hours_in_a_day * days_in_a_year 
+leap_year = seconds_in_a_minute * minutes_in_an_hour * hours_in_a_day * days_in_a_leap_year
+Q1 = input("How many seconds are there in a year?: ")
+if Q1 == normal_year:
+  print("oh, spot on!")
+else:
+  print("oh no, it's",normal_year)
+
+Q2 = input("How many seconds are there in a leap year?: ")
+if Q2 == leap_year:
+  print("You're really a genius!")
+else:
+  print("oh no, it's", leap_year, "You tried, really!")
