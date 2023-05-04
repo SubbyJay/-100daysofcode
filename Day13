@@ -1,0 +1,22 @@
+print("==== This is a grade generator ====")
+print()
+print(" You can ignore caps while typing ")
+print()
+test = input("What is the name of the test you recently took?: ")
+maxScore = int(input("what is the maximum score you could receive?: "))            
+currentScore = int(input("what is the score you received?: ")) 
+totalScore = currentScore / maxScore * 100
+if totalScore > 90 and totalScore <= 100:
+   print("You got an A+ with",totalScore,"in",test)
+elif totalScore > 80 and totalScore <= 89:
+  print("You got an A with",totalScore,"in",test)
+elif totalScore > 70 and totalScore <= 79:
+  print("You got a B with",totalScore,"in",test)
+elif totalScore > 60 and totalScore <= 69:
+  print("You got a C with",totalScore,"in",test)
+elif totalScore > 50 and totalScore <= 59:
+  print("You got a D with",totalScore,"in",test)
+else:
+  print("You got a U with",totalScore,"in",test)
+   
+             
