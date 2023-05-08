@@ -1,0 +1,18 @@
+print(" ===THIS IS A GAME THAT TELLS YOU THE SOUNDS ANIMALS MAKE===")
+print()
+exit = "no"
+while exit == "no":
+ animal = input("what animal do you want?: ")
+ if animal == "cow":
+  print("A",animal, "goes moo")
+ elif animal == "dog":
+   print("A",animal,"goes whoof! whoof!")
+ elif animal == "cat":
+  print("A",animal,"goes meow! meow!")
+ elif animal == "goat":
+  print("A",animal,"goes meeeee! meeee!")
+ else:
+  print("oops! I  don't know the sound")
+
+  exit = input("do you wanna exit?: ")
+  
