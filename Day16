@@ -1,0 +1,13 @@
+print("=== Fill in the blank qoute ===")
+print()
+print("(Type in the blank lycrics and see if you are as cool as me)")
+counter = 1
+while True:
+  quote = input("what goes up will surely come?: ")
+  counter +=1
+  if quote == "down":
+    print("well done! It only took you", counter, "attempt(s)")
+    break
+  else:
+    print("nope! try again")
+    
