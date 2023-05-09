@@ -1,0 +1,5 @@
+loan = 1000
+ARP = 0.05
+for counter in range(10):
+  loan += (loan*ARP)
+  print("Year",counter+1 , "is", round(loan, 2))
