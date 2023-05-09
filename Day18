@@ -1,0 +1,22 @@
+print(" This is 'guess the number' game ")
+print()
+counter = 1
+real_number = 28000
+
+while True:
+  number_guess = int(input(" What is your guess?(pick a number between 1 - 2,000,000): "))
+  if number_guess > real_number:
+   print("Too high!")
+   counter += 1
+  
+  if number_guess < real_number:
+   print("Too low!")
+   counter += 1
+   continue
+  elif number_guess == real_number:
+     print("well done! It only took you", counter, "attempt(s) to get it correctly")
+     exit()
+     break
+  else:
+    print("This is a number I do not recognise")
+    
