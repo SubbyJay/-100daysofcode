@@ -1,0 +1,9 @@
+print(" this is as list generator")
+print()
+start = int(input("Start at: "))
+print()
+end = int(input("End at: "))
+print()
+increment = int(input("Increment between values: "))
+for i in range (start, end, increment):
+  print(i)
