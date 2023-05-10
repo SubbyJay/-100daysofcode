@@ -1,0 +1,17 @@
+print("This is a maths game")
+print("this is a multiplication game and you can pick any number you want")
+number = int(input("Name your multiples: "))
+counter = 0
+for i in range (1, 11):
+  result = i*number
+  print(i, "x", number)
+  figure = int(input("> "))
+  if figure == result:
+   print("yes! you're correct")
+   counter += 1
+  else:
+    print("nope, it is",result)
+if counter == 10:
+   print("that's an impressive score of 10 in a row!")
+else:
+ print("you got", counter, "out of 10 correct.")
