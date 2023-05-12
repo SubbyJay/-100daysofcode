@@ -1,0 +1,20 @@
+print(" This is a totally random one-million-to-one guessing game")
+import random
+counter = 1 
+myNumber = random.randint(1,200)
+
+while True:
+ number_guess = int(input(" What is your guess?(pick a number between 1 - 200): "))
+ if number_guess > myNumber:
+  print("Too high!")
+  counter += 1
+  if number_guess < myNumber:
+   print("Too low!")
+   counter += 1
+   continue
+  elif number_guess == myNumber:
+     print("well done! It only took you", counter, "attempt(s) to get it correctly")
+     exit()
+     break
+  else:
+    print("This is a number I do not recognise")
