@@ -6,15 +6,15 @@ myNumber = random.randint(1,200)
 while True:
  number_guess = int(input(" What is your guess?(pick a number between 1 - 200): "))
  if number_guess > myNumber:
-  print("Too high!")
+  print("Too high! Try again")
   counter += 1
-  if number_guess < myNumber:
-   print("Too low!")
-   counter += 1
-   continue
-  elif number_guess == myNumber:
-     print("well done! It only took you", counter, "attempt(s) to get it correctly")
-     exit()
-     break
-  else:
+ elif number_guess < myNumber:
+  print("Too low! Try again")
+  counter += 1
+  continue
+ elif number_guess == myNumber:
+  print("well done! It only took you", counter, "attempt(s) to get it correctly")
+  break
+  exit()
+ else:
     print("This is a number I do not recognise")
