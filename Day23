@@ -1,0 +1,16 @@
+print("this is a login system, kindly put the correct username and password")
+
+def login_system():
+  print()
+  while True:
+    username = input("what's your username?: ")
+    print()
+    password = input("what's your password?: ")
+    if username == "Hack" and password == "dynamic001":
+      print("Welcome to Replit!")
+      break
+    elif password != "Hack" and password != "dynamic001":
+      print("Whoops! I don't recognise that username or password. Try again!")
+    else:
+      continue
+login_system()
