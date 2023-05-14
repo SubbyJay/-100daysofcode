@@ -1,0 +1,9 @@
+import random
+roll = int(input("How many sides?: "))
+rollQuestion = "yes"
+
+def rollDice(roll):
+  print("you rolled", random.randint(1, roll))
+while rollQuestion == "yes":
+  rollDice(roll)
+  rollQuestion = input("roll again?: ")                 
