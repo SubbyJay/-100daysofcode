@@ -12,20 +12,85 @@ def strength():
   strengthStat = ((rollDice(6)*rollDice(8))/2)+12
   return strengthStat
 
+
+
+print("⚔️ BATTLE TIME ⚔️")
+print()
+Fname = input("Name your Legend:\n")
+Ftype = input("Character Type (Human, Elf, Wizard, Orc):\n")
+print()
+print(Fname)
+FHealth = health()
+FStrength = strength()
+print("HEALTH:", FHealth)
+print("STRENGTH:",  FStrength)
+print()
+print("Who are they battling with?")
+print()
+  
+Sname = input("Name your Legend:\n")
+Stype = input("Character Type (Human, Elf, Wizard, Orc):\n")
+print()
+print(Sname)
+SHealth = health()
+SStrength = strength()
+print("HEALTH:", SHealth)
+print("STRENGTH:",  SStrength)
+print()
+print("Who are they battling with?")
+print()
+time.sleep(1)
+os.system("clear")
+print("The battle begins!")
+print()
+
+round = 1
+winner = None
+
 while True:
-  print("⚔️ CHARACTER BUILDER ⚔️")
-  print()
-  name = input("Name your Legend:\n")
-  type = input("Character Type (Human, Elf, Wizard, Orc):\n")
-  print()
-  print(name)
-  print("HEALTH:", health())
-  print("STRENGTH:", strength())
-  print()
-  print("May your name go down in Legend…")
-  print()
-  again = input("Again?:\n")
-  if again=="No" or again=="no":
-    break
   time.sleep(1)
-  os.system("clear") 
+  os.system("clear")
+  print("⚔️ BATTLE TIME ⚔️")
+  print()
+  print("The battle begins!")
+  FDice = rollDice(6)
+  SDice = rollDice(6)
+  difference = abs(FStrength - SStrength) + 1
+  if FDice > SDice:
+    SHealth -= difference
+    if round==1:
+      print(Fname, "wins the first blow")
+    else:
+      print(Fname, "wins round", round)
+  elif SDice > FDice:
+    FHealth -= difference
+    if round==1:
+      print(Sname, "wins the first blow")
+    else:
+      print(Sname, "wins round", round)
+  else:
+    print("Their swords clash and they draw round", round)
+  print()
+  print(Fname)
+  print("HEALTH:", FHealth)
+  print()
+  print(Sname)
+  print("HEALTH:", SHealth)
+  print()
+  if FHealth<=0:
+    print(Fname, "has died!")
+    winner = Sname
+    break
+  elif SHealth<=0:
+    print(Sname, "has died!")
+    winner = Fname
+    break
+  else:
+    print("And they're both standing for the next round")
+    round += 1
+    
+time.sleep(1)
+os.system("clear")
+print("⚔️ BATTLE TIME ⚔️")
+print()
+print(winner, "has won in", round, "rounds")
