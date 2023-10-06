@@ -12,4 +12,7 @@ print("Super Subroutine")
 print("With my ", end="")
 customise_word("red", "new program")
 customise_word("reset", " I can just call red('and') ")
-customise_word("red", "it will print in red 
+customise_word("red", "it will print in red ")
+customise_word("green", "or even green")
+
+
