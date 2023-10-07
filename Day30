@@ -1,0 +1,8 @@
+print("30 days down")
+print()
+for day in range(1, 31):
+  thought = input(f"what do you think of day {day}?: ")
+  print()
+  response = f"You think day {day} was {thought}"
+  print(response)
+  print()
