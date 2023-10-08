@@ -1,0 +1,4 @@
+import random
+number = random.randint(0,3)
+greetings = ["Good day", "eku le", "Guten tag", "Asalam alaykum"]
+print(greetings[number])
