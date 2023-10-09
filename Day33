@@ -1,0 +1,48 @@
+import time, os
+ToDoList = []
+
+def colourChange(colour):
+  if colour=="red":
+    return ("\033[31m")
+  elif colour=="white":
+    return ("\033[0m")
+  elif colour=="blue":
+    return ("\033[34m")
+  elif colour=="yellow":
+    return ("\033[33m")
+  elif colour == "green":
+    return ("\033[32m")
+  elif colour == "purple":
+    return ("\033[35m")
+    
+title  = "To Do list Manager"
+item = "item"
+print(f"{colourChange('yellow')}{title:^40}")
+
+print()
+while True:
+  print()
+  menu = input(f"{colourChange('red')}Do you want to view, add or edit?: ")
+  if menu == "add":
+   print()
+   item = input(f"{colourChange('green')}What do you want to add to your to do list?: ")
+   ToDoList.append(item)
+   time.sleep(1)
+   os.system("clear")
+  elif menu == "edit":
+    print()
+    item = input(f"{colourChange('white')}Which item have you completed on your to do list?: ")
+    if item in ToDoList:
+      ToDoList.remove(item)
+      time.sleep(1)
+      os.system("clear")
+  elif menu == "view":
+    print()
+    for item in ToDoList:
+     print(f"{colourChange('blue')}{item:<35}")
+  else:
+      print()
+      print(f"{colourChange('purple')}oops! You can only add, edit or remove")
+      print()
+time.sleep(1)
+os.system("clear")
