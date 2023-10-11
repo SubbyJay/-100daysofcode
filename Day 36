@@ -13,9 +13,6 @@ while True:
     if yourfirstname not in firstname:
         firstname.append(yourfirstname)
         fullname()
-    else:
-        print("Name is already on the list")
-
     yourlastname = input("What is your last name?: ").capitalize().strip()
     if yourlastname not in lastname:
         lastname.append(yourlastname)
