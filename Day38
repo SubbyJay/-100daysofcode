@@ -1,0 +1,19 @@
+def colourChange(colour):
+  if colour=="a":
+    print ("\033[31m", end="")
+  elif colour=="e":
+    print ("\033[0m", end="")
+  elif colour=="i":
+    print ("\033[34m", end="")
+  elif colour=="o":
+    print ("\033[33m", end="")
+  elif colour == "u":
+    print ("\033[32m", end="")
+  elif colour == "t":
+    print ("\033[35m", end="")
+
+type = input("write something > ")
+for letter in type:
+  colourChange(letter.lower())
+  print(letter, end="")
+print()
