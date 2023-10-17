@@ -1,0 +1,35 @@
+import random, time, os
+
+listofwords = ["british", "suave", "integrity", "accent", "evil", "genius", "Downton"]
+letterPicked = []
+lives = 6
+word = random.choice(listofwords)
+
+display = "_" * len(word)  # Initialize display with underscores
+
+while True:
+    print(display)
+    print(f"You have {lives} lives left.")
+
+    if "_" not in display:
+        print("You won!")
+        break
+
+    letter = input("Guess a letter: ").lower()
+
+    if letter in letterPicked:
+        print("You already guessed that letter.")
+        continue
+
+    letterPicked.append(letter)
+
+    if letter in word:
+        print("You found a letter!")
+        display = "".join([letter if word_letter == letter else display_letter for word_letter, display_letter in zip(word, display)])
+    else:
+        print("You didn't find a letter.")
+        lives -= 1
+
+    if lives <= 0:
+        print("You lost.")
+        break
