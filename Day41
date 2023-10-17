@@ -1,0 +1,15 @@
+myDictionary = {"website name" : "", "URL": "", "description": "", "star rating": ""}
+
+def website_rating():
+  website_name = input("Input website name: ").strip()
+  myDictionary["website name"] = website_name
+  url = input("Input the URL: ").strip()
+  myDictionary["URL"] = url
+  describe = input("Input a description: ").strip()
+  myDictionary["description"] = describe
+  rating = input("Input the a star rating out of 5: ").strip()
+  myDictionary["star rating"] = rating
+  print()
+website_rating()
+for name, value in myDictionary.items():
+    print(f"{name}:{value}")
