@@ -1,0 +1,18 @@
+myUser = {"name":"", "DOB":"", "phone number":"", "email":"", "address":""}
+
+def addUser():
+    name = input("Enter your name: ").strip()
+    myUser["name"] = name
+    DOB = input("Enter your DOB: ").strip()
+    myUser["DOB"] = DOB
+    phoneNumber = input("Enter your phone number: ").strip()
+    myUser["phone number"] = phoneNumber
+    email = input("Enter your email: ").strip()
+    myUser["email"] = email
+    address = input("Enter your address: ").strip()
+    myUser["address"] = address
+    print()
+
+  
+    print(f"hi {name}, our dictionary says that you were born on {DOB} and your phone number is {phoneNumber} your email is {email} and your address is {address}")
+addUser()
