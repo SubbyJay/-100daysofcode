@@ -1,0 +1,40 @@
+MokeBeast = {"name":"", "type":"", "special_move":"", "HP":"", "MP":""}
+
+def colours(colour):
+    if colour=="red":
+      return ("\033[31m")
+    elif colour=="white":
+      return ("\033[0m")
+    elif colour=="blue":
+      return ("\033[34m")
+    elif colour=="yellow":
+      return ("\033[33m")
+    elif colour == "green":
+      return ("\033[32m")
+    elif colour == "purple":
+      return ("\033[35m")
+
+def beast_game():
+  beast_name = input("Input beast's name: ").capitalize().strip()
+  MokeBeast["name"] = beast_name
+  beast_type = input("Input beast's type: ").capitalize().strip()
+  MokeBeast["type"] = beast_type
+  beast_special_move = input("Input beast's special move: ").capitalize().strip()
+  MokeBeast["special_move"] = beast_special_move
+  beast_HP = input("Input beast's HP: ").capitalize().strip()
+  MokeBeast["HP"] = beast_HP
+  beast_MP = input("Input beast's MP: ").capitalize().strip()
+  MokeBeast["MP"] = beast_MP
+  print("")
+
+  if beast_type == "Fire":
+    print(f"{colours('red')}Your beast name is {MokeBeast['name']}. It is an {MokeBeast['type']} type of beast with a special move of {MokeBeast['special_move']}. The beast has an {MokeBeast['HP']} HP and {MokeBeast['MP']} MP.{colours('0m')}")
+  elif beast_type == "Water":
+    print(f"{colours('red')}Your beast name is {MokeBeast['name']}. It is an {MokeBeast['type']} type of beast with a special move of {MokeBeast['special_move']}. The beast has an {MokeBeast['HP']} HP and {MokeBeast['MP']} MP.{colours('0m')}")
+  elif beast_type == "Earth":
+    print(f"{colours('red')}Your beast name is {MokeBeast['name']}. It is an {MokeBeast['type']} type of beast with a special move of {MokeBeast['special_move']}. The beast has an {MokeBeast['HP']} HP and {MokeBeast['MP']} MP.{colours('0m')}")
+  else:
+    print(f"{colours('red')}Your beast name is {MokeBeast['name']}. It is an {MokeBeast['type']} type of beast with a special move of {MokeBeast['special_move']}. The beast has an {MokeBeast['HP']} HP and {MokeBeast['MP']} MP.{colours('0m')}")
+
+
+beast_game()
